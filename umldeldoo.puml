@@ -1,0 +1,85 @@
+@startuml
+class agua {
++ String cantidad
++ void obtener_cantidad()
++ void obtener_nombre()
+}
+
+
+class cafecolombiano {
+- String tipo_de_grano
++ void servir()
++ void preparar()
+}
+
+
+class cafe {
+- String nombre
+- long tamaño
+- int precio
++ void preparar()
++ void servir()
+}
+
+
+interface ingrediente {
++ void obtener_nombre()
++ void obtener_cantidad()
+}
+
+class espressoitaliano {
++ String intensidad
++ void preparar()
++ void servir()
+}
+
+
+class empleados {
++ String nombre
++ String puesto
++ int salario
+- void trabajar()
+- void tomar_orden()
+}
+
+
+class leche {
++ void obtener_cantidad()
++ void obtener_nombre()
+}
+
+class sucursal {
+- String nombre
+- String direccion
++ void agregarempleado()
++ void agregaringresdiente()
++ void agregarequipo()
++ void agregarespecialidad()
+}
+
+
+class granos {
++ String tipo
++ String cantidad
++ void obtener_nombre()
++ void obtener_cantidad()
+}
+
+
+class equipo {
++ String tipo
++ String estado
++ void encender()
++ void apagar()
++ void reparar()
+}
+
+
+
+
+ingrediente <|.. agua
+cafe <|-- cafecolombiano
+cafe <|-- espressoitaliano
+ingrediente <|.. leche
+ingrediente <|.. granos
+@enduml
